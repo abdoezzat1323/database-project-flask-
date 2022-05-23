@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<link rel="stylesheet" href="./style.css">-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.min.css')}}">
+	{% block head %}{% endblock %}
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<div id="content">
+		{% block content %}{% endblock %}
+	</div>
+	<div id="footer">
+		{% block footer %}{% endblock %}
+		<script type="text/javascript" src="{{url_for('static', filename='bootstrap.min.js')}}"></script>
+	</div>
+
+</body>
+</html>
